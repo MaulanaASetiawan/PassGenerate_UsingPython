@@ -46,11 +46,11 @@ def generate():
     print('='*30)
     try:
         length = int(input('\nEnter the length of password: '))
-        if length < 1:
-            input('Cant create a password below -1 character')
+        if length < 8:
+            input('Password Minimum limit is 8 characters')
             generate()
         elif length > 94:
-            input('Too many characters')
+            input('Too many characters, 94 characters is maximum')
             generate()
         else:
             exe = random.sample(all, length)
@@ -68,7 +68,7 @@ def generate():
 
 def tryit():
     loop = input('Again? > ')
-    if loop == 'y' or loop == 'Y' or loop == 'Yes' or loop == 'yes' or loop == 'yEs' or loop == 'YeS' or loop == 'yeS' or loop == 'YES':
+    if loop == 'y' or loop == 'Y' or loop == 'Yes' or loop == 'yes' or loop == 'yEs' or loop == 'YeS' or loop == 'yeS' or loop == 'YES' or loop == 'YEs' or loop == 'yES':
         generate()
     elif loop == 'n' or loop == 'N' or loop == 'No' or loop == 'no' or loop == 'nO' or loop == 'NO':
         quit('Thanks for using this, See you next time :))')
